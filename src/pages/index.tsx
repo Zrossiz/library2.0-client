@@ -7,6 +7,4 @@ const Home = () => {
   return <div>Home</div>;
 };
 
-export const getStaticProps = () => {};
-
 export default withLayout(Home);
