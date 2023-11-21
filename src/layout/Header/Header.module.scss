@@ -25,6 +25,23 @@
     }
 }
 
+.loginWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatarWrapper {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
 .nav {
     width: 300px;
 }
