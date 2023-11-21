@@ -11,16 +11,16 @@ const Books = ({ books }: BooksPageProps) => {
   return <div>Книги</div>;
 };
 
-export const getStaticProps = async () => {
-  const { data: books } = await axios.get<IBook[]>(API.mainPage.getBooks);
-  if (!books) {
-    return;
-  }
+// export const getStaticProps = async () => {
+//   const { data: books } = await axios.get<IBook[]>(API.mainPage.getBooks);
+//   if (!books) {
+//     return;
+//   }
 
-  return {
-    props: { books },
-    revalidate: 60,
-  };
-};
+//   return {
+//     props: { books },
+//     revalidate: 60,
+//   };
+// };
 
 export default withLayout(Books);
