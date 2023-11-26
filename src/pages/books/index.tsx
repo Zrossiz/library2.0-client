@@ -5,22 +5,30 @@ import { IBook } from "@/interfaces/IBook";
 
 interface BooksPageProps extends Record<string, unknown> {
   books: IBook[];
+  length: number;
 }
 
-const Books = ({ books }: BooksPageProps) => {
-  return <div>Книги</div>;
+const Books = ({ books, length }: BooksPageProps) => {
+  return (
+    <div>
+      {books.map((item, index) => (
+        <div key={index}>{item.title}</div>
+      ))}
+      Всего книг: {length}
+    </div>
+  );
 };
 
-// export const getStaticProps = async () => {
-//   const { data: books } = await axios.get<IBook[]>(API.mainPage.getBooks);
-//   if (!books) {
-//     return;
-//   }
+export const getStaticProps = async () => {
+  const { data } = await axios.get<BooksPageProps>(API.mainPage.getBooks);
 
-//   return {
-//     props: { books },
-//     revalidate: 60,
-//   };
-// };
+  const books = data.data;
+  const length = data.length;
+
+  return {
+    props: { books, length },
+    revalidate: 60,
+  };
+};
 
 export default withLayout(Books);

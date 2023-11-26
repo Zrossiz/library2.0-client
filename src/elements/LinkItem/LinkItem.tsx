@@ -9,6 +9,7 @@ export const LinkItem = ({
   href,
   icon,
   children,
+  bordered,
   className,
 }: LinkItemProps) => {
   return (
@@ -21,7 +22,12 @@ export const LinkItem = ({
           </div>
         </Link>
       ) : (
-        <Link className={cn(className, styles.wrapper)} href={href}>
+        <Link
+          className={cn(className, styles.wrapper, {
+            [styles.border]: bordered,
+          })}
+          href={href}
+        >
           {children}
         </Link>
       )}

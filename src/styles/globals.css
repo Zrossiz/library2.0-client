@@ -1,7 +1,7 @@
 :root {
   --main: #756712;
   --white: #fff;
-  --gray: #adadad;
+  --grey: #adadad;
   --black: #000;
 }
 
@@ -47,7 +47,7 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--gray);
+  background-color: var(--white);
 }
 
 h1,

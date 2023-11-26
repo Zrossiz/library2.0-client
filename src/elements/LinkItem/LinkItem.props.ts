@@ -8,4 +8,5 @@ export interface LinkItemProps
   children: JSX.Element | string;
   icon?: string;
   href: string;
+  bordered?: boolean;
 }
