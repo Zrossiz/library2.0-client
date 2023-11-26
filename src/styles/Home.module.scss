@@ -1,0 +1,65 @@
+.backgroundWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.mainTitle {
+  margin-bottom: 30px;
+}
+
+.title {
+  width: fit-content;
+  background: rgb(65,30,89);
+  background: linear-gradient(90deg, rgba(65,30,89,1) 0%, rgba(99,12,12,1) 50%, rgba(111,73,19,1) 100%);
+  padding: 30px 20px;
+  padding-bottom: 100px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pointerWrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  background-color: var(--black);
+  border-top-left-radius: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pointer {
+  transform: rotate(90deg);
+
+  img {
+    transition: 0.6s;
+  }
+
+  img:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.services {
+  border: 1px solid var(--white);
+  width: fit-content;
+  padding: 14px 20px;
+  border-radius: 20px;
+  transition: 0.2s linear;
+  background-color: transparent;
+
+}

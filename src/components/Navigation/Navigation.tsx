@@ -8,13 +8,11 @@ import { navData } from "@/helpers/constants";
 export const Navigation = () => {
   const router = useRouter();
   const pathname = router.pathname;
-  console.log(pathname);
-  console.log(router.asPath);
   return (
     <nav className={styles.wrapper}>
       {navData.map((item, index) => (
         <LinkItem
-          className={cn({
+          className={cn(styles.link, {
             [styles.active]: pathname == item.href,
           })}
           icon={item.icon}

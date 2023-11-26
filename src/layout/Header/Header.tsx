@@ -53,9 +53,11 @@ export const Header = () => {
             <div>Username</div>
           </div>
         ) : (
-          <LinkButton href="/login" className={styles.login}>
-            Войти
-          </LinkButton>
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <LinkButton href="/login" className={styles.login}>
+              Войти
+            </LinkButton>
+          </motion.div>
         )}
       </motion.div>
     </header>

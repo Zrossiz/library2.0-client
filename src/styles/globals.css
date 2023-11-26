@@ -5,6 +5,10 @@
   --black: #000;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 *::-webkit-scrollbar {
   height: 8px;
   width: 8px;
@@ -44,6 +48,12 @@ html {
 body {
   margin: 0;
   background-color: var(--gray);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
 .hidden {
